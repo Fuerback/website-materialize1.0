@@ -70,18 +70,20 @@ dashboardModulo.controller('dashboardController', function ($scope){
 
 $(document).ready(function(){
   $('select').material_select();
+
   $('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    selectMonths: true,
+    selectYears: 15,
     today: 'Hoje',
     clear: 'Limpar',
     close: 'Ok',
-    closeOnSelect: false // Close upon selecting a date,
+    closeOnSelect: false
   });
-  $('.modal').modal();
+
+  $('.modal').modal({
+    dismissible: false
+  });
+
   $(".menu-button").sideNav();
 });
-
-/* Initialization to Clipboard */
-new ClipboardJS('.btn');
 
